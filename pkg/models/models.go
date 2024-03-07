@@ -1,4 +1,4 @@
-package products
+package models
 
 import "time"
 
@@ -6,10 +6,11 @@ import "time"
 type Product struct {
 	ID          int     `json:"id" db:"id"`
 	Name        string  `json:"name" db:"name"`
-	Description *string `json:"description" db:"description"`
+	Description string  `json:"description" db:"description"`
 	Price       float64 `json:"price" db:"price"`
 	Quantity    int     `json:"quantity" db:"quantity"`
 	CategoryID  int     `json:"id_category" db:"id_category"`
+	ImageURL    string  `json:"image_url" db:"image_url"`
 }
 
 type Category struct {
